@@ -1,1 +1,88 @@
-<p>news works!</p>
+<div class="calendar-container">
+ 
+    <div class="row">
+                
+        <!-- Menú de meses -->
+        <div class="col-md-4" *ngIf="showMonthMenu">
+            <div class="month-panel">
+            <h3 class="month-panel-title">Seleccionar Mes</h3>
+            <div class="month-grid">
+                <a class="month-item" *ngFor="let month of months; let i = index" 
+                [class.active]="i === currentMonth"
+                (click)="selectMonth(i)">
+                <span class="month-name">{{month}}</span>
+                <div class="month-info" *ngIf="getMonthEvents(i)">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>{{getMonthEvents(i)}} eventos</span>
+                </div>
+                </a>
+            </div>
+            </div>
+        </div>
+
+         <!-- Calendario -->
+      <div [class]="(showMonthMenu || showEventDetails) ? 'col-md-8' : 'col-12'">
+        <div class="calendar-header-controls d-flex justify-content-between align-items-center mb-4">
+          <button class="btn btn-success" (click)="toggleMonthMenu()">
+            <i class="bi bi-calendar-month me-2"></i>
+            Mes
+          </button>
+          
+          <h2 class="text-success mb-0">{{months[currentMonth]}} {{currentYear}}</h2>
+          
+          <button class="btn btn-success" (click)="toggleEventDetails()">
+            <i class="bi bi-calendar-event me-2"></i>
+            Eventos
+          </button>
+        </div>
+
+        <div class="calendar">
+          <!-- Días de la semana -->
+          <div class="calendar-header d-flex">
+            <div class="calendar-cell">Dom</div>
+            <div class="calendar-cell">Lun</div>
+            <div class="calendar-cell">Mar</div>
+            <div class="calendar-cell">Mié</div>
+            <div class="calendar-cell">Jue</div>
+            <div class="calendar-cell">Vie</div>
+            <div class="calendar-cell">Sáb</div>
+          </div>
+  
+          <!-- Días del mes -->
+          <div class="calendar-body">
+            <div class="d-flex" *ngFor="let week of getDaysInMonth(currentMonth, currentYear)">
+              <div class="calendar-cell" 
+                   *ngFor="let day of week"
+                   [class.empty-cell]="!day"
+                   [class.has-event]="hasEvents(day)"
+                   [class.selected]="day && selectedDate.getDate() === day.getDate()"
+                   (click)="day && selectDate(day)">
+                <span class="day-number" *ngIf="day">{{day.getDate()}}</span>
+                <div class="event-dot" *ngIf="hasEvents(day)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Panel de eventos -->
+      <div class="col-md-4" *ngIf="showEventDetails">
+        <div class="events-panel">
+          <h3 class="events-title">Eventos para {{selectedDate | date:'dd/MM/yyyy'}}</h3>
+          <div class="event-list">
+            <div class="event-item" *ngFor="let event of getEventsForDate(selectedDate)">
+              <h4 class="event-title">{{event.eventName}}</h4>
+              <p class="event-content">{{event.eventContent}}</p>
+              <div class="event-details">
+                <span><i class="bi bi-geo-alt-fill"></i> {{event.location}}</span>
+                <span><i class="bi bi-clock-fill"></i> {{event.time}}</span>
+              </div>
+            </div>
+            <div class="no-events" *ngIf="getEventsForDate(selectedDate).length === 0">
+              No hay eventos programados para este día
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

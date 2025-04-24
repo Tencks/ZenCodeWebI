@@ -1,0 +1,19 @@
+.main-layout {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1400px;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(241, 241, 36) !important;
+  }
+  
+  .content {
+    flex: 1;
+    min-width: 0;
+    background-color: rgb(95, 78, 248) !important;
+  }
+  
+  .sidebar {
+    width: 15vw;
+    min-width: 200px;
+  }

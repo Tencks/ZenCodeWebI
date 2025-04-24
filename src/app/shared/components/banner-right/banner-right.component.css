@@ -1,0 +1,23 @@
+.banner-container {
+    width: 15vw;
+    position: sticky;
+    top: 20px;
+    padding: 10px;
+    background-color: rgb(255, 115, 0);
+  }
+  
+  .banner-item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .banner-item img {
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .banner-item img:hover {
+    transform: scale(1.02);
+  }

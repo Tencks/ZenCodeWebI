@@ -1,0 +1,36 @@
+.social-icons a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-item i {
+  width: 20px;
+}
+
+
+
+.dropdown-menu {
+  padding: 0.5rem;
+}
+
+
+/* ---------OTROS-------- */
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+
+.nav-link :hover{
+  color: greenyellow !important;
+}
+
