@@ -9,7 +9,14 @@ import { NewsComponent } from "./features/components/news/news.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, HomeComponent, FooterComponent, CardComponent, BannerRightComponent, NewsComponent],
+  imports: [RouterOutlet,
+     NavbarComponent,
+      // HomeComponent,
+       FooterComponent,
+       CardComponent,
+        BannerRightComponent,
+        //  NewsComponent
+        ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

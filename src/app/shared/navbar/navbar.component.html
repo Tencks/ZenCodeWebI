@@ -40,31 +40,46 @@
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">INICIO</a>
+          <a class="navbar-text nav-link" (click)="scrollToTop()" routerLink="home" routerLinkActive="active" 
+                       style="cursor: pointer;" >
+                        INICIO
+                    </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">BOUQUET</a>
+          <a class="navbar-text nav-link" (click)="scrollToTop()" routerLink="empresa" routerLinkActive="active" 
+                       style="cursor: pointer;" >
+                        EMPRESA
+                    </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">NUESTRA GENTE</a>
+          <a class="navbar-text nav-link" (click)="scrollToTop()" routerLink="gente" routerLinkActive="active" 
+          style="cursor: pointer;" >
+           NUESTRA GENTE
+       </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">NEGOCIOS</a>
+          <a class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">NEGOCIOS</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#"><i class="bi bi-box2-heart"></i> Consignación de Hacienda</a>
-            <a class="dropdown-item" href="#"><i class="bi bi-egg-fried"></i> Nutrición Animal</a>
-            <a class="dropdown-item" href="#"><i class="bi bi-flower1"></i> Acopio de Granos</a>
-            <a class="dropdown-item" href="#"><i class="bi bi-flower2"></i> Agroinsumos</a>
-            <a class="dropdown-item" href="#"><i class="bi bi-flower3"></i> Semillero</a>
-            <a class="dropdown-item" href="#"><i class="bi bi-fuel-pump"></i> Combustibles</a>
-            <a class="dropdown-item" href="#"><i class="bi bi-shield-check"></i> Seguros</a>
+            <a class="dropdown-item" (click)="scrollToTop()" routerLink="hacienda" routerLinkActive="active" style="cursor: pointer;"><i class="bi bi-box2-heart"></i> Consignación de Hacienda</a>
+            <a class="dropdown-item" (click)="scrollToTop()" routerLink="nutricion" routerLinkActive="active" style="cursor: pointer;"><i class="bi bi-egg-fried"></i> Nutrición Animal</a>
+            <a class="dropdown-item" (click)="scrollToTop()" routerLink="acopio" routerLinkActive="active" style="cursor: pointer;"><i class="bi bi-flower1"></i> Acopio de Granos</a>
+            <a class="dropdown-item" (click)="scrollToTop()" routerLink="agroinsumos" routerLinkActive="active" style="cursor: pointer;"><i class="bi bi-flower2"></i> Agroinsumos</a>
+            <a class="dropdown-item" (click)="scrollToTop()" routerLink="semillero" routerLinkActive="active" style="cursor: pointer;"><i class="bi bi-flower3"></i> Semillero</a>
+            <a class="dropdown-item" (click)="scrollToTop()" routerLink="combustibles" routerLinkActive="active" style="cursor: pointer;"><i class="bi bi-fuel-pump"></i> Combustibles</a>
+            <a class="dropdown-item" (click)="scrollToTop()" routerLink="seguros" routerLinkActive="active" style="cursor: pointer;"><i class="bi bi-shield-check"></i> Seguros</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">NOTICIAS</a>
+          <a class="navbar-text nav-link" (click)="scrollToTop()" routerLink="noticias" routerLinkActive="active" 
+          style="cursor: pointer;" >
+           NOTICIAS
+       </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">CONTACTO</a>
+          <a class="navbar-text nav-link" (click)="scrollToTop()" routerLink="contacto" routerLinkActive="active" 
+          style="cursor: pointer;" >
+           CONTACTO
+       </a>
         </li>
       </ul>
     </div>

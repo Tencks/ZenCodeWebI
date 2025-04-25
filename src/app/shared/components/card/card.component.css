@@ -9,7 +9,7 @@
 
 .video-bg {
     width: 100vw; /* Ocupa todo el ancho disponible */
-    height: auto; /* Mantiene la proporción */
+    height: 720px; /* Mantiene la proporción */
     display: block; /* Evita espacios adicionales por ser un elemento en línea */
     object-fit: cover; /* Ajusta el video sin dejar espacios */
 }
